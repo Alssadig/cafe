@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}Reservation - Cafe Or Meriem{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+
+    <h1>Reserver une table</h1>
+
+    <p>
+        Reservez votre table au Cafe Or Meriem.
+    </p>
+
+</section>
+
+
+<section class="form-container">
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <button type="submit" class="btn">
+            Reserver
+        </button>
+
+    </form>
+
+</section>
+
+{% endblock %}

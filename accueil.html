@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="hero">
+    <h2>Bienvenue au Cafe Or Meriem</h2>
+    <p>Le gout du cafe, l'elegance du the et des patisseries artisanales.</p>
+    <a class="btn" href="/menu">Decouvrir le Menu</a>
+</section>
+
+<section class="cards">
+    {% for p in produits %}
+        <div class="card">
+            <img src="{{ p.image.url }}">
+            <h3>{{ p.nom }}</h3>
+            <p>{{ p.prix }} </p>
+        </div>
+    {% endfor %}
+</section>
+
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}À propos - Café Or Meriem{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+    <h1>À propos de nous</h1>
+</section>
+
+<section class="about">
+
+    <div class="about-image">
+        <img
+            src="{% static 'images/photo_sadig.jpg' %}"
+            alt="Café Or Meriem"
+        >
+    </div>
+
+    <div class="about-content">
+
+        <h2>Bienvenue au Café Or Meriem</h2>
+
+        <p>
+            Le Café Or Meriem est un espace chaleureux et convivial où vous pouvez
+            déguster un café fraîchement préparé, un thé traditionnel parfumé ou une
+            délicieuse sélection de pâtisseries artisanales.
+        </p>
+
+        <p>
+            Notre objectif est de vous offrir une expérience agréable dans une
+            ambiance familiale et accueillante, où chaque visite devient un véritable
+            moment de détente et de partage.
+        </p>
+
+        <h3>Une ambiance unique</h3>
+
+        <p>
+            Que vous souhaitiez commencer votre journée avec un bon petit-déjeuner,
+            faire une pause entre amis ou simplement profiter d’un instant de calme,
+            le Café Or Meriem vous accueille dans un cadre confortable, élégant et
+            chaleureux.
+        </p>
+
+        <h3>Nos spécialités</h3>
+
+        <ul>
+            <li>Cafés espresso, cappuccino et latte préparés avec soin.</li>
+            <li>Thé à la menthe et infusions traditionnelles.</li>
+            <li>Pâtisseries maison et viennoiseries fraîches.</li>
+            <li>Boissons fraîches et jus de fruits.</li>
+        </ul>
+
+        <h3>Notre engagement</h3>
+
+        <p>
+            Nous privilégions la qualité de nos produits, la fraîcheur des ingrédients
+            et un service attentionné afin d’offrir à chaque client une expérience
+            mémorable. Votre satisfaction et votre sourire sont au cœur de notre
+            engagement.
+        </p>
+
+    </div>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block title %}Menu - Cafe Or Meriem{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+
+    <h1>Notre Menu</h1>
+
+    <p>
+        Decouvrez nos cafes, thes et delicieux gateaux.
+    </p>
+
+</section>
+
+
+<section class="products">
+
+    {% for produit in produits %}
+
+    <div class="product-card">
+
+        {% if produit.image %}
+            <img
+                src="{{ produit.image.url }}"
+                alt="{{ produit.nom }}"
+            >
+        {% endif %}
+
+        <div class="product-info">
+
+            <h2>{{ produit.nom }}</h2>
+
+            <p class="category">
+                {{ produit.get_categorie_display }}
+            </p>
+
+            <p>
+                {{ produit.description }}
+            </p>
+
+            <strong>
+                {{ produit.prix }} 
+            </strong>
+
+        </div>
+
+    </div>
+
+    {% empty %}
+
+    <p>
+        Aucun produit disponible pour le moment.
+    </p>
+
+    {% endfor %}
+
+</section>
+
+{% endblock %}

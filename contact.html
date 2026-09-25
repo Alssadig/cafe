@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact - Cafe Or Meriem{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+
+    <h1>Contactez-nous</h1>
+
+    <p>
+        Une question ? N'hesitez pas a nous contacter.
+    </p>
+
+</section>
+
+
+<section class="contact-section">
+
+    <div class="contact-info">
+
+        <h2>Nos coordonnees</h2>
+
+        <p> Adresse : Cafe Or Meriem Paris</p>
+
+        <p> Telephone : 06 60 42 53 75</p>
+
+        <p> Email : contact@cafeormeriem.com</p>
+
+    </div>
+
+
+    <div class="form-container">
+
+        <form method="POST">
+
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            <button type="submit" class="btn">
+                Envoyer
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+{% endblock %}

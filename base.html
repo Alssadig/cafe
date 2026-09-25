@@ -1,0 +1,52 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}Café Or Meriem{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                <a href="{% url 'accueil' %}">
+                     Café Or Meriem
+                </a>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="{% url 'accueil' %}">Accueil</a></li>
+                <li><a href="{% url 'menu' %}">Menu</a></li>
+                <li><a href="{% url 'galerie' %}">Galerie</a></li>
+                <li><a href="{% url 'reservation' %}">Reservation</a></li>
+                <li><a href="{% url 'apropos' %}">A propos</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <!-- Contenu des pages -->
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Cafe Or Meriem - Tous droits reserves.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Accueil - Café Or Meriem{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+    <div class="overlay">
+        <h1>Bienvenue au Café Or Meriem</h1>
+
+```
+    <p>
+        Le goût du café, l'élégance du thé et des pâtisseries artisanales.
+    </p>
+
+    <a class="btn" href="{% url 'menu' %}">
+        Découvrir le Menu
+    </a>
+</div>
+```
+
+</section>
+
+<section class="cards">
+    <!--<h2 class="section-title">Nos Produits</h2>-->
+
+```
+{% for p in produits %}
+    <div class="card">
+        {% if p.image %}
+            <img src="{{ p.image.url }}" alt="{{ p.nom }}">
+        {% endif %}
+
+        <h3>{{ p.nom }}</h3>
+
+        <p class="price">{{ p.prix }} €</p>
+    </div>
+{% empty %}
+    <!-- Ceci est un commentaire HTML -->
+    <!-- <p>Aucun produit disponible.</p> -->
+{% endfor %}
+
+
+</section>
+
+{% endblock %}
